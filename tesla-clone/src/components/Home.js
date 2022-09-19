@@ -9,6 +9,9 @@ function Home() {
         <Section title="Model-Y" desc="Order Online For Touchless Delivery" img="model-y.jpg" />
         <Section title="Model-X" desc="Order Online For Touchless Delivery" img="model-x.jpg" />
         <Section title="Model-3" desc="Order Online For Touchless Delivery" img="model-3.jpg" />
+        <Section title="Lowest Cost Solar Panels in America" desc="Money-back guarantee" img="solar-panel.jpg" />
+        <Section title="Solar For New Roofs" desc="Solar Roof Costs Less Than a New Rent" img="solar-roof.jpg" />
+        <Section title="Accesories" desc="" img="accessories.jpg" />
 
     </Container>
   )
