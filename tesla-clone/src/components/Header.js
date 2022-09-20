@@ -24,13 +24,17 @@ function Header() {
         </RightMenu>
 
         <BurgerNav>
-          <CustomClose />
-          <li><a href='#'>Existing Inventory</a></li>
-          <li><a href='#'>Used Inventory</a></li>
-          <li><a href='#'>Trade-In</a></li>
-          <li><a href='#'>Cybertruck</a></li>
-          <li><a href='#'>Roadster</a></li>
-          <li><a href='#'>Roller</a></li>
+
+          <CloseWrapper>
+            <CustomClose />
+          </CloseWrapper>
+
+          <li> <button>  Existing Inventory </button> </li>
+          <li> <button>  Used Inventory </button> </li>
+          <li> <button>  Trade-In </button> </li>
+          <li> <button>  Cybertruck </button> </li>
+          <li> <button>  Roadster </button> </li>
+          <li> <button>  Roller </button> </li>
         </BurgerNav>
 
     </Container>
@@ -105,13 +109,20 @@ const BurgerNav = styled.div`
     padding: 15px 0;
     border-bottom: 1px solid rgba(0, 0, 0, .2);
 
-    a {
+    button {
       font-weight: 600;
+      border: none;
+      background: none;
     }
   }
 
 `
 
 const CustomClose = styled(CloseIcon)`
-  
+  cursor pointer;
+`
+
+const CloseWrapper = styled.div`
+  display: flex;
+  justify-content: flex-end;
 `
