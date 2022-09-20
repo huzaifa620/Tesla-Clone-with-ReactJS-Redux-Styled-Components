@@ -1,26 +1,33 @@
 import React from 'react'
 import styled from "styled-components"
+import Fade from 'react-reveal/Fade';
 
 function Section( { title, desc, img } ) {
   return (
     <Wrap bgImg={img}>
 
-        <ItemText>
-            <h1>{title}</h1>
-            <p>{desc}</p>
-        </ItemText>
+        <Fade bottom>
+            <ItemText>
+                <h1>{title}</h1>
+                <p>{desc}</p>
+            </ItemText>
+        </Fade>
+        
 
         <Buttons>
 
             <ButtonGroup>
 
-                <LeftButton>
-                    Custom Order
-                </LeftButton>
+                <Fade bottom>
 
-                <RightButton>
-                    Existing Inventory
-                </RightButton>
+                    <LeftButton>
+                        Custom Order
+                    </LeftButton>
+
+                    <RightButton>
+                        Existing Inventory
+                    </RightButton>
+                </Fade>
 
             </ButtonGroup>
 
@@ -35,6 +42,7 @@ function Section( { title, desc, img } ) {
 export default Section
 
 const Wrap = styled.div`
+    z-index: 10;
     width: 100vw;
     height: 100vh;
     // background: orange;
