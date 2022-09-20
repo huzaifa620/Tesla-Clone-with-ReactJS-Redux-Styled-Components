@@ -1,9 +1,12 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled from "styled-components"
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 
 function Header() {
+
+  const [burgerStatus, setBurgerStatus] = useState(false)
+
   return (
     <Container>
         <img src='/images/logo.svg' alt='' />
@@ -19,14 +22,14 @@ function Header() {
 
           <p>Shop</p>
           <p>Tesla Account</p>
-          <CustomMenu />
+          <CustomMenu onClick={ () => setBurgerStatus(true) }/>
 
         </RightMenu>
 
-        <BurgerNav>
+        <BurgerNav show={burgerStatus}>
 
           <CloseWrapper>
-            <CustomClose />
+            <CustomClose onClick={ () => setBurgerStatus(false) }/>
           </CloseWrapper>
 
           <li> <button>  Existing Inventory </button> </li>
@@ -104,6 +107,8 @@ const BurgerNav = styled.div`
   padding: 20px;
   flex-direction: column;
   text-align: start;
+  transform: ${props => props.show ? 'translateX(0)' : 'translateX(100%)'};
+  transition: transform 0.3s;
 
   li {
     padding: 15px 0;
